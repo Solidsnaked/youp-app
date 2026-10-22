@@ -2,21 +2,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>YouP</title>
 <script>
-/* Copia para compartir: deja de funcionar una hora después de publicarla. */
+/* Copia para compartir: deja de funcionar 24 horas después de publicarla. */
 (function(){
-  var EXP = 1792626803000;
+  var EXP = 1792718991000;
   function cerrar(){
     if (Date.now() < EXP) return false;
-    document.body && (document.body.innerHTML = '');
     document.documentElement.innerHTML = '<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>YouP</title></head>' +
       '<body style="margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0b0b0d;color:#f5f5f6;font-family:sans-serif;text-align:center;padding:24px">' +
       '<div><h1 style="font-size:1.6rem;margin:0 0 10px">YouP</h1><p style="opacity:.75;max-width:30ch;margin:0 auto">Este enlace de prueba ya expiró. ¡Gracias por probar la app!</p></div></body>';
     return true;
   }
-  if (!cerrar()){
-    setInterval(cerrar, 30000);
-    document.addEventListener("DOMContentLoaded", cerrar);
-  }
+  if (!cerrar()){ setInterval(cerrar, 60000); document.addEventListener("DOMContentLoaded", cerrar); }
 })();
 </script>
 
